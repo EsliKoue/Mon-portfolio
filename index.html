@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Koue Mabea Obed Esli</title>
+
+    <!-- FontAwesome -->
+    <link rel="styleshee t"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#cover">Accueil</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#competences">Compétences acquises</a></li>
+            <li><a href="#realisations">Réalisations</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-controls">
+            <button id="theme-toggle-nav" class="nav-theme" title="Basculer le thème" aria-pressed="false">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page de couverture -->
+    <header id="cover" class="cover">
+        <h1>Koue Mabea Obed Esli</h1>
+        <h2>Bootcamp - Fondation Informatique Ceditech</h2>
+        <p class="quote">« L'expert en tout était autrefois un débutant. » — Helen Hayes</p>
+        
+        
+    </header>
+
+    <!-- À propos -->
+    <section id="apropos">
+        <h3>À propos</h3>
+        <p>
+            Je suis Koue Mabea Obed Esli, passionné par les technologies et actuellement participant au 
+            <strong>Bootcamp - Fondation Informatique Ceditech</strong>. 
+            Mon objectif est de développer des compétences solides en informatique et analyse de données dans le cloud.
+        
+        </p>
+    </section>
+
+    <!-- Compétences -->
+    <section id="competences">
+        <h3>Compétences acquises</h3>
+        <div class="skills">
+            <div><i class="fab fa-html5"></i> HTML</div>
+            <div><i class="fab fa-css3-alt"></i> CSS</div>
+            <div><i class="fas fa-cloud"></i> Cloud Computing</div>
+            <div><i class="fas fa-chart-bar"></i> Power BI</div>
+            <div><i class="fas fa-code"></i> Programmation</div>
+        </div>
+    </section>
+
+    <!-- Réalisations -->
+    <section id="realisations">
+        <h3>Réalisations</h3>
+        <!-- toolbar: filter / view / theme -->
+        <div class="gallery-toolbar">
+            <div class="filters">
+                <button class="filter active" data-filter="all">Tous</button>
+                <button class="filter" data-filter="cloud">Cloud</button>
+                <button class="filter" data-filter="data">Data</button>
+                <button class="filter" data-filter="web">Web</button>
+            </div>
+
+            <div class="controls">
+                <button id="view-toggle" title="Basculer vue">
+                    <i class="fas fa-th-large"></i>
+                </button>
+                <button id="theme-toggle" title="Mode sombre" aria-pressed="false">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <figure class="project" data-tags="cloud">
+                <img src="./Images/Création-de-VPC.png" alt="Création de VPC sur AWS" data-title="Création de VPC" data-desc="Exercice pratique montrant la configuration d'un Virtual Private Cloud (VPC) sur AWS pour isoler et sécuriser des ressources cloud.">
+                <figcaption>
+                    <h4>Création de VPC</h4>
+                    <p>Exercice pratique montrant la configuration d'un Virtual Private Cloud (VPC) sur AWS pour isoler et sécuriser des ressources cloud.</p>
+                    <a class="download-btn" href="./Images/Création-de-VPC.png" download="Lab-Creation-VPC.png" title="Télécharger le lab Création de VPC">Télécharger le lab</a>
+                </figcaption>
+            </figure>
+
+            <figure class="project" data-tags="data">
+                <img src="./Images/Depot-github.png" alt="Dépôt GitHub" data-title="Dépôt GitHub" data-desc="Projet hébergé sur GitHub pour versionner et partager le code, comprenant instructions d'installation et README.">
+                <figcaption>
+                    <h4>Dépôt GitHub</h4>
+                    <p>Projet hébergé sur GitHub pour versionner et partager le code, comprenant instructions d'installation et README.</p>
+                    <a class="download-btn" href="./Images/Depot-github.png" download="Lab-Depot-Github.png" title="Télécharger le lab Dépôt GitHub">Télécharger le lab</a>
+                </figcaption>
+            </figure>
+
+            <figure class="project" data-tags="web">
+                <img src="./Images/Deploiement-site-sur-AWS .png" alt="Déploiement sur AWS" data-title="Déploiement sur AWS" data-desc="Mise en ligne d'un site statique sur AWS — configuration S3 / CloudFront pour distribution avec bonne performance.">
+                <figcaption>
+                    <h4>Déploiement sur AWS</h4>
+                    <p>Mise en ligne d'un site statique sur AWS — configuration S3 / CloudFront pour distribution avec bonne performance.</p>
+                    <a class="download-btn" href="./Images/Deploiement-site-sur-AWS .png" download="Lab-Deployment-AWS.png" title="Télécharger le lab Déploiement sur AWS">Télécharger le lab</a>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h3>Contact</h3>
+
+        <form id="contact-form" novalidate>
+            <input type="text" name="name" placeholder="Votre nom" required>
+            <input type="email" name="email" placeholder="Votre email" required>
+            <textarea name="message" placeholder="Votre message" required></textarea>
+            <!-- optional subject used for mailbox or Formspree -->
+            <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio">
+
+            <div id="form-message" class="form-message" aria-live="polite"></div>
+            <div id="form-config-hint" class="form-config-hint">Le formulaire n'est pas encore connecté à un service d'envoi automatique. Cliquez ici pour configurer EmailJS (recommandé) ou Formspree.</div>
+
+            <button type="submit">Envoyer</button>
+        </form>
+
+        <div class="socials">
+            <a href="https://github.com/EsliKoue" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/esli-obed-koue-0a1b5a255/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Koue Mabea Obed Esli</p>
+    </footer>
+
+    <!-- EmailJS SDK (client-side email delivery) - used when configured in script.js -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script>
+        // Provide a no-op init here — script.js will initialize if keys are set
+        if (window.emailjs && typeof emailjs.init === 'function') {
+            // don't init here without key; script.js will call init when user sets keys
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
