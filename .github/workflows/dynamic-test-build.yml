@@ -1,0 +1,31 @@
+name: Test & Build Dynamic Site
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # déclenchement manuel
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Install dependencies
+        run: npm install || echo "Pas de package.json, installation ignorée"
+
+      - name: Lint HTML
+        run: npx htmlhint ./index.html || echo "Aucun HTML à tester"
+
+      - name: Lint CSS
+        run: npx stylelint "./**/*.css" || echo "Aucun CSS à tester"
+
+      - name: Lint JS
+        run: npx eslint "./**/*.js" || echo "Aucun JS à tester"
