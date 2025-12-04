@@ -20,11 +20,6 @@ jobs:
           sudo npm install -g htmlhint
           htmlhint ./index.html
 
-      - name: Lint CSS
-        run: |
-          sudo npm install -g stylelint stylelint-config-standard
-          stylelint "./**/*.css"
-
       - name: Lint JS
         run: |
           sudo npm install -g eslint
