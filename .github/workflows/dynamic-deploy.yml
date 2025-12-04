@@ -49,3 +49,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./ # la racine du repo contient tes fichiers statiques
+          publish_branch: gh-pages
