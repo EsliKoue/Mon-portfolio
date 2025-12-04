@@ -1,3 +1,4 @@
+
 // ----------- MENU ACTIF AU SCROLL -----------
 const sections = document.querySelectorAll("section, header");
 const navLinks = document.querySelectorAll("nav a");

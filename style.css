@@ -354,4 +354,4 @@ body.dark footer{
 /* nav controls */
 .nav-controls{ display:flex; align-items:center; gap:10px; margin-right:14px }
 .nav-controls .nav-theme{ background:transparent; border:1px solid rgba(0,0,0,0.06); padding:6px 8px; border-radius:8px; color:var(--text); cursor:pointer }
-body.dark .nav-controls .nav-theme{ color:var(--text); border-color: rgba(255,255,255,0.08) }
+body.dark .nav-controls .nav-theme{ color:var(--text); border-color: rgba(255,255,255,0.08) }µµµ
